@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *myImg01;
 @property (weak, nonatomic) IBOutlet UIImageView *myImg02;
+@property (weak, nonatomic) IBOutlet UIImageView *myImg03;
+
+
+
 
 @end
 

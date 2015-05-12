@@ -21,24 +21,44 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01_background_v.1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Bs-KB-gJ2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="95"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-82-zpz">
                                 <rect key="frame" x="16" y="13" width="80" height="80"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="25" width="60" height="60"/>
+                                    <rect key="frame" x="16" y="27" width="60" height="60"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_background_v.1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-Iu-Hfe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="102" width="400" height="95"/>
                                 </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5gV-Iu-Hfe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5gV-Iu-Hfe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="myImg01" destination="Z1h-82-zpz" id="hJA-vp-sY1"/>
                         <outlet property="myImg02" destination="5Bs-KB-gJ2" id="Wa4-JF-wxw"/>
+                        <outlet property="myImg03" destination="5gV-Iu-Hfe" id="hVF-N9-ixh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="336"/>
+            <point key="canvasLocation" x="243" y="336"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="3Fc-R1-BbG">

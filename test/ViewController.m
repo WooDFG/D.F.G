@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSMutableArray *array = [[NSMutableArray alloc]init];
@@ -24,28 +25,45 @@
     self.myImg01.animationDuration = 1 ;
    [self.myImg01 startAnimating];
 }
-//如畫面被點擊後放開,會改變螢幕顏色
 
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//如畫面被點擊後放開
+//-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    UITouch *touch =  [touches anyObject];
+//    if(touch.tapCount == 1)
+//    {
+//        UIViewController *abc = [self.storyboard instantiateViewControllerWithIdentifier:@"vc"];
+//        [self showDetailViewController:abc sender:self];
+//        
+//    }
+//}
+//更改圖片位置
+-(void)viewDidLayoutSubviews
 {
-    UITouch *touch =  [touches anyObject];
-    if(touch.tapCount == 1)
-    {
-        [self performSelector:@selector(setBackground:) withObject:[UIColor blueColor] afterDelay:2];
-        self.view.backgroundColor = [UIColor redColor];
-        
-        
-        UIViewController *vc = [self .storyboard instantiateViewControllerWithIdentifier:@"abc"];
-        [self showDetailViewController:vc sender:self];
-        
-    }
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    [super viewDidLayoutSubviews];
+    _myImg03.frame = CGRectMake(0 , -_myImg03.frame.size.height, 0, _myImg03.frame.size.height);
     
 }
 
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    
+}
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesMoved:touches withEvent:event];
+    NSLog(@"觸碰移動");
+    
+   
+}
+
+
+
+
 @end
+
+
+
+
