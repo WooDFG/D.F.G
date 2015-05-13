@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+@import UIKit;
 @interface ViewController ()
 
 @end
@@ -55,6 +55,7 @@
 {
     [super touchesMoved:touches withEvent:event];
     NSLog(@"觸碰移動");
+    
     
    
 }

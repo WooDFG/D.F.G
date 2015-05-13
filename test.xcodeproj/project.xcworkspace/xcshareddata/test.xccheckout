@@ -10,31 +10,31 @@
 	<string>test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7EED8C9F2C76636069EE3E070A97576E69411BF0</key>
-		<string>https://github.com/WooDFG/Test0509.git</string>
+		<key>CEBFDAB587943CBAD7AA798ED970E1E168950A78</key>
+		<string>https://github.com/WooDFG/D.F.G.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>test/test.xcodeproj</string>
+	<string>test.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7EED8C9F2C76636069EE3E070A97576E69411BF0</key>
-		<string>../../..</string>
+		<key>CEBFDAB587943CBAD7AA798ED970E1E168950A78</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/WooDFG/Test0509.git</string>
+	<string>https://github.com/WooDFG/D.F.G.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7EED8C9F2C76636069EE3E070A97576E69411BF0</string>
+	<string>CEBFDAB587943CBAD7AA798ED970E1E168950A78</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7EED8C9F2C76636069EE3E070A97576E69411BF0</string>
+			<string>CEBFDAB587943CBAD7AA798ED970E1E168950A78</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Test0509</string>
+			<string>D.F.G</string>
 		</dict>
 	</array>
 </dict>
