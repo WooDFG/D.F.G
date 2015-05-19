@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    
     var toDoItems = [ToDoItem]()
     let pinchRecognizer = UIPinchGestureRecognizer()
     
@@ -28,6 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.separatorStyle = .None
         //tableView.backgroundColor = UIColor.blackColor()
         tableView.rowHeight = 70
+        
+        
+        
         
         //載入背景圖片 ****待修正
         let imgBg = UIImageView(frame:tableView.bounds)
@@ -46,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoItems.append(ToDoItem(text: "星期二猴子肚子餓"))
         toDoItems.append(ToDoItem(text: "星期三猴子去爬山"))
         toDoItems.append(ToDoItem(text: "星期四猴子去考試"))
-    
+        
     }
     
     // MARK: - Table view data source
@@ -63,18 +66,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
             cell.selectionStyle = .None
-            cell.textLabel?.backgroundColor = UIColor.clearColor()
+            //cell.textLabel?.backgroundColor = UIColor.clearColor()
             let item = toDoItems[indexPath.row]
             //            cell.textLabel?.text = item.text
             cell.delegate = self
             cell.toDoItem = item
+            
+            
+            
             
             //cell的底圖  ****** 底圖待修改
             let v = UIImageView(frame:cell.bounds)
             v.contentMode = .ScaleToFill
             v.image = UIImage(named:"cell-1.png")
             cell.backgroundView = v
-        
+            
+            
+            
+            
+            
+            
+            
+            
             return cell
     }
     
@@ -321,7 +334,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         // this behavior starts when a user pulls down while at the top of the table
         pullDownInProgress = scrollView.contentOffset.y <= 0.0
-        placeHolderCell.backgroundColor = UIColor.redColor()
+        //下拉底圖****
+        //placeHolderCell.backgroundColor = UIColor.blackColor()
+        
+        
+        //cell的底圖  ****** 底圖待修改
+        let v = UIImageView(frame:placeHolderCell.bounds)
+        v.contentMode = .ScaleToFill
+        v.image = UIImage(named:"cell-1.png")
+        placeHolderCell.backgroundView = v
+        
+        
         if pullDownInProgress {
             // add the placeholder
             tableView.insertSubview(placeHolderCell, atIndex: 0)
@@ -352,6 +375,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         pullDownInProgress = false
         placeHolderCell.removeFromSuperview()
     }
+    
+    
     
     // MARK: - add, delete, edit methods
     

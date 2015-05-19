@@ -16,17 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-79-k61">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-79-k61">
+                                <rect key="frame" x="0.0" y="79" width="600" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-8J-gfN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ppK-79-k61" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="PNu-L0-rzl"/>
-                            <constraint firstAttribute="trailing" secondItem="ppK-79-k61" secondAttribute="trailing" id="T9i-yV-ZbJ"/>
-                            <constraint firstItem="ppK-79-k61" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="dHm-Se-zU4"/>
-                            <constraint firstItem="ppK-79-k61" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="puG-8b-7fl"/>
+                            <constraint firstItem="ppK-79-k61" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="F9l-bN-x50"/>
+                            <constraint firstAttribute="trailing" secondItem="ppK-79-k61" secondAttribute="trailing" id="jIf-mt-e7G"/>
                         </constraints>
                     </view>
                     <connections>
@@ -37,4 +38,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-2.png" width="640" height="283"/>
+    </resources>
 </document>

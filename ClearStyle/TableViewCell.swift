@@ -5,7 +5,6 @@
 //  Created by WengVic on 2015/5/7.
 //  Copyright (c) 2015年 WengVic. All rights reserved.
 //
-
 import UIKit
 import QuartzCore
 
@@ -59,13 +58,21 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
                 return label
             }
             
+            
+            
+            
+            
+            
             // tick and cross labels for context cues
             tickLabel = createCueLabel()
+            //              ***unicode***
             tickLabel.text = "\u{2713}"
             tickLabel.textAlignment = .Right
             crossLabel = createCueLabel()
             crossLabel.text = "\u{2717}"
             crossLabel.textAlignment = .Left
+            
+            
             
             super.init(style: style, reuseIdentifier: reuseIdentifier)
             
@@ -127,14 +134,15 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
             let translation = recognizer.translationInView(self)
             center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
-            completeOnDragRelease = frame.origin.x > frame.size.width / 2.0
+            //滑動距離移除
+            deleteOnDragRelease   = frame.origin.x < -frame.size.width / 3.5
+            completeOnDragRelease = frame.origin.x >  frame.size.width / 3.5
             // fade the contextual clues
             let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 2.0)
-            tickLabel.alpha = cueAlpha
+            tickLabel.alpha  = cueAlpha
             crossLabel.alpha = cueAlpha
             // indicate when the user has pulled the item far enough to invoke the given action
-            tickLabel.textColor = completeOnDragRelease ? UIColor.greenColor() : UIColor.whiteColor()
+            tickLabel.textColor  = completeOnDragRelease ? UIColor.greenColor() : UIColor.whiteColor()
             crossLabel.textColor = deleteOnDragRelease ? UIColor.redColor() : UIColor.whiteColor()
         }
         // 3
