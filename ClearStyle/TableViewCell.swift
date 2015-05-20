@@ -167,6 +167,10 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
         }
     }
     
+    
+   
+    
+    
     override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
             let translation = panGestureRecognizer.translationInView(superview!)

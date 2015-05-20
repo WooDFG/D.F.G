@@ -5,17 +5,22 @@
 //  Created by WengVic on 2015/5/7.
 //  Copyright (c) 2015年 WengVic. All rights reserved.
 //
-
+//  鍵盤收回 1-2
+//  動態圖片 2-1
+//
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    //動態圖片 2-1
     @IBOutlet weak var imgViewBoy: UIImageView!
     
     
     var toDoItems = [ToDoItem]()
     let pinchRecognizer = UIPinchGestureRecognizer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +37,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         
+        
+        
         //載入背景圖片 ****待修正
         let imgBg = UIImageView(frame:tableView.bounds)
         imgBg.contentMode = .ScaleToFill
         imgBg.image = UIImage(named:"bg-1.png")
         tableView.backgroundView = imgBg
         
-        //*****載入圖片動畫
+        
+        
+        //動畫圖片2-2
         imgViewBoy.image = UIImage.animatedImageNamed("btn-Boy-", duration: 0.8)
 
         
@@ -52,7 +61,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoItems.append(ToDoItem(text: "星期三猴子去爬山"))
         toDoItems.append(ToDoItem(text: "星期四猴子去考試"))
         
+        
+        
+        //鍵盤收回1-1
+        //Looks for single or multiple taps.
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
     }
+    //鍵盤收回1-2
+    //Calls this function when the tap is recognized.
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    
     
     // MARK: - Table view data source
     
@@ -336,6 +360,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         // this behavior starts when a user pulls down while at the top of the table
         pullDownInProgress = scrollView.contentOffset.y <= 0.0
+        
         //下拉底圖****
         //placeHolderCell.backgroundColor = UIColor.blackColor()
         
@@ -364,6 +389,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             placeHolderCell.label.text = -scrollViewContentOffsetY > tableView.rowHeight ?
                 "Release to add item" : "Pull to add item"
             placeHolderCell.alpha = min(1.0, -scrollViewContentOffsetY / tableView.rowHeight)
+            
+           
+            
         } else {
             pullDownInProgress = false
         }
