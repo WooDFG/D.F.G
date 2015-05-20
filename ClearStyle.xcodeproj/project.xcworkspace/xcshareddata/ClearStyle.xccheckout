@@ -14,6 +14,8 @@
 		<string>https://github.com/VicWeng/Gesture-Swift.git</string>
 		<key>84969C8570C822166196EA75BD657FED749C0979</key>
 		<string>https://github.com/VicWeng/swift.git</string>
+		<key>CEBFDAB587943CBAD7AA798ED970E1E168950A78</key>
+		<string>https://github.com/WooDFG/D.F.G.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ClearStyle.xcodeproj</string>
@@ -22,14 +24,16 @@
 		<key>0C8FD8247FE5C52D1B3504B326DABA727DF69499</key>
 		<string>../../../ClearStyle</string>
 		<key>84969C8570C822166196EA75BD657FED749C0979</key>
+		<string>../../../swift</string>
+		<key>CEBFDAB587943CBAD7AA798ED970E1E168950A78</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/VicWeng/swift.git</string>
+	<string>https://github.com/WooDFG/D.F.G.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>84969C8570C822166196EA75BD657FED749C0979</string>
+	<string>CEBFDAB587943CBAD7AA798ED970E1E168950A78</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -39,6 +43,14 @@
 			<string>0C8FD8247FE5C52D1B3504B326DABA727DF69499</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ClearStyle</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CEBFDAB587943CBAD7AA798ED970E1E168950A78</string>
+			<key>IDESourceControlWCCName</key>
+			<string>D.F.G</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

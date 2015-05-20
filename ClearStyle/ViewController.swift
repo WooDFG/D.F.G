@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imgViewBoy: UIImageView!
     
     
     var toDoItems = [ToDoItem]()
@@ -31,14 +32,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         
-        
         //載入背景圖片 ****待修正
         let imgBg = UIImageView(frame:tableView.bounds)
         imgBg.contentMode = .ScaleToFill
         imgBg.image = UIImage(named:"bg-1.png")
         tableView.backgroundView = imgBg
         
-        
+        //*****載入圖片動畫
+        imgViewBoy.image = UIImage.animatedImageNamed("btn-Boy-", duration: 0.8)
+
         
         
         

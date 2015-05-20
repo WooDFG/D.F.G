@@ -9,36 +9,60 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ClearStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="6ru-rV-Wsa"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICj-9m-vvl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-79-k61">
-                                <rect key="frame" x="0.0" y="79" width="600" height="521"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-8J-gfN">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-8J-gfN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="88"/>
+                                </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn-Boy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="K65-X6-fcn">
+                                <rect key="frame" x="16" y="20" width="60" height="60"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-79-k61">
+                                <rect key="frame" x="0.0" y="88" width="600" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="88" width="600" height="712"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="88" width="400" height="712"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ppK-79-k61" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="F9l-bN-x50"/>
-                            <constraint firstAttribute="trailing" secondItem="ppK-79-k61" secondAttribute="trailing" id="jIf-mt-e7G"/>
+                            <constraint firstItem="gg2-8J-gfN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="562-lm-v8k"/>
+                            <constraint firstItem="ppK-79-k61" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Bzn-XH-2no"/>
+                            <constraint firstItem="ICj-9m-vvl" firstAttribute="top" secondItem="ppK-79-k61" secondAttribute="bottom" id="JeI-a9-bne"/>
+                            <constraint firstAttribute="trailing" secondItem="gg2-8J-gfN" secondAttribute="trailing" id="MEq-JU-VLK"/>
+                            <constraint firstItem="gg2-8J-gfN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="REc-ZR-5Q7"/>
+                            <constraint firstItem="ppK-79-k61" firstAttribute="top" secondItem="gg2-8J-gfN" secondAttribute="bottom" id="XBA-eI-I1i"/>
+                            <constraint firstAttribute="trailing" secondItem="ppK-79-k61" secondAttribute="trailing" id="ezA-wc-fGN"/>
+                            <constraint firstItem="ppK-79-k61" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="88" id="sab-DS-dd2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgViewBoy" destination="K65-X6-fcn" id="ik5-vq-Rtk"/>
                         <outlet property="tableView" destination="ppK-79-k61" id="ieC-VP-bri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="256" y="337"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg-2.png" width="640" height="283"/>
+        <image name="btn-Boy-1.png" width="82" height="100"/>
     </resources>
 </document>
