@@ -31,7 +31,37 @@
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn-Boy-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="K65-X6-fcn">
                                 <rect key="frame" x="103" y="20" width="60" height="60"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="5" y="20" width="60" height="60"/>
+                                </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRm-IG-z0T">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="84" y="59" width="107" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMX-A4-f2k">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="191" y="59" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-eS-Lb5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="20" width="125" height="28"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -44,15 +74,32 @@
                             <constraint firstAttribute="trailing" secondItem="ppK-79-k61" secondAttribute="trailing" id="ezA-wc-fGN"/>
                             <constraint firstItem="ppK-79-k61" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="88" id="sab-DS-dd2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FRm-IG-z0T"/>
+                                <exclude reference="SMX-A4-f2k"/>
+                                <exclude reference="A5P-eS-Lb5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FRm-IG-z0T"/>
+                                <include reference="SMX-A4-f2k"/>
+                                <include reference="A5P-eS-Lb5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="A5P-eS-Lb5" id="R0G-fw-5Mm"/>
                         <outlet property="imgViewBoy" destination="K65-X6-fcn" id="ik5-vq-Rtk"/>
                         <outlet property="tableView" destination="ppK-79-k61" id="ieC-VP-bri"/>
+                        <outlet property="temperatureLabel" destination="SMX-A4-f2k" id="yLv-Sy-WhS"/>
+                        <outlet property="weatherLabel" destination="FRm-IG-z0T" id="1Wx-Ph-EIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="337"/>
+            <point key="canvasLocation" x="255" y="336.75"/>
         </scene>
     </scenes>
     <resources>

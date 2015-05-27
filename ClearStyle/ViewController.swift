@@ -19,6 +19,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var imgViewBoy: UIImageView!
     
     
+    //天氣 3-1
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    //天氣 3-2
+    var city = "Paris"
+    var country = "France"
+    var defaults = NSUserDefaults(suiteName: "group.com.appcoda.weatherdemo")!
+    
+    
+    
     var toDoItems = [ToDoItem]()
     let pinchRecognizer = UIPinchGestureRecognizer()
     
@@ -51,6 +62,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         imgViewBoy.image = UIImage.animatedImageNamed("btn-Boy-", duration: 0.8)
 
         
+        //天氣 3-3
+        weatherLabel.text = ""
+        temperatureLabel.text = ""
+        // Get default location
+        if let location = defaults.valueForKey("location") as? String {
+            let defaultLocation = split(location) { $0 == "," }
+            city = defaultLocation[0]
+            country = defaultLocation[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        }
+        
+        displayCurrentWeather()
+        
+        
         
         
         if toDoItems.count > 0 {
@@ -75,6 +99,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
+    
+    //天氣 3-4
+    func displayCurrentWeather() {
+        // Display location
+        cityLabel.text = city
+        //countryLabel.text = country
+        
+        // Invoke weather service to get the weather data
+        WeatherService.sharedWeatherService().getCurrentWeather(city + "," + country, completion: { (data, error) -> () in
+            dispatch_async(dispatch_get_main_queue(), {
+                if let weatherData = data {
+                    self.weatherLabel.text = weatherData.weather.capitalizedString
+                    self.temperatureLabel.text = String(format: "%d", weatherData.temperature) + "\u{00B0}"
+                }
+            })
+        })
+    }
+    
+    
+    
     
     
     
