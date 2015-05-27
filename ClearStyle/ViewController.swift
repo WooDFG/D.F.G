@@ -9,6 +9,7 @@
 //  動態圖片 2-1
 //
 import UIKit
+import WeatherInfoKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
     
@@ -38,11 +39,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         
-        
         //載入背景圖片 ****待修正
         let imgBg = UIImageView(frame:tableView.bounds)
         imgBg.contentMode = .ScaleToFill
-        imgBg.image = UIImage(named:"bg-1.png")
+        imgBg.image = UIImage(named:"new-bg-1.png")
         tableView.backgroundView = imgBg
         
         
@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             //cell的底圖  ****** 底圖待修改
             let v = UIImageView(frame:cell.bounds)
             v.contentMode = .ScaleToFill
-            v.image = UIImage(named:"cell-1.png")
+            v.image = UIImage(named:"new-cell-1.png")
             cell.backgroundView = v
             
             
@@ -368,7 +368,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //cell的底圖  ****** 底圖待修改
         let v = UIImageView(frame:placeHolderCell.bounds)
         v.contentMode = .ScaleToFill
-        v.image = UIImage(named:"cell-1.png")
+        v.image = UIImage(named:"new-cell-1.png")
         placeHolderCell.backgroundView = v
         
         
