@@ -24,8 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     //天氣 3-2
-    var city = "Paris"
-    var country = "France"
+    var city = "Taipei"
+    var country = "Taiwan"
     var defaults = NSUserDefaults(suiteName: "group.com.appcoda.weatherdemo")!
     
     
