@@ -10,52 +10,46 @@
 //
 import UIKit
 
-
-
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,TableViewCellDelegate {
-    
-  
     
     @IBOutlet weak var tableView: UITableView!
     
     //動態圖片 2-1
     @IBOutlet weak var imgViewBoy: UIImageView!
     
-  
     
     var toDoItems = [ToDoItem]()
+    //手勢兩指展開
     let pinchRecognizer = UIPinchGestureRecognizer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //手勢兩指展開
         pinchRecognizer.addTarget(self, action: "handlePinch:")
+        //在tableView加入手勢
         tableView.addGestureRecognizer(pinchRecognizer)
         
         tableView.dataSource = self
         tableView.delegate = self
+        //重複使用cell
         tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.separatorStyle = .None
         //tableView.backgroundColor = UIColor.blackColor()
-        tableView.rowHeight = 70
+        //下拉高度執行cell
+        tableView.rowHeight = 75
         
         
         
-        //載入背景圖片 ****待修正
+        //載入背景圖片
         let imgBg = UIImageView(frame:tableView.bounds)
         imgBg.contentMode = .ScaleToFill
         imgBg.image = UIImage(named:"new-bg-1.png")
         tableView.backgroundView = imgBg
         
-        
-        
         //動畫圖片2-2
-        imgViewBoy.image = UIImage.animatedImageNamed("frog-", duration: 2.0)
+        imgViewBoy.image = UIImage.animatedImageNamed("prince-", duration: 1.0)
 
-        
-        
-        
         
         
         if toDoItems.count > 0 {
@@ -76,7 +70,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     //鍵盤收回1-2
     //Calls this function when the tap is recognized.
-    func DismissKeyboard(){
+    func DismissKeyboard()
+    {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
@@ -88,33 +83,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Table view data source
     
+    
+    //**********************意義不明**********************
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    
+    
+    //統計tableView裡的Rows ???
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println("numberOfRowsInSection")
         return toDoItems.count
     }
-    
+    //指定cell可以重複使用 ???
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
             cell.selectionStyle = .None
             //cell.textLabel?.backgroundColor = UIColor.clearColor()
+            
+            
+            
+            //*********意義不明******
             let item = toDoItems[indexPath.row]
-            //            cell.textLabel?.text = item.text
+            //cell.textLabel?.text = item.text
             cell.delegate = self
             cell.toDoItem = item
             
             
             
             
-            //cell的底圖  ****** 底圖待修改
-            let v = UIImageView(frame:cell.bounds)
-            v.contentMode = .ScaleToFill
-            v.image = UIImage(named:"new-cell-1.png")
-            cell.backgroundView = v
-            
+            //cell的底圖
+            let cellBg = UIImageView(frame:cell.bounds)
+            cellBg.contentMode = .ScaleToFill
+            //cellBg.image = UIImage(named:"new-cell-1.png")
+            cellBg.image = UIImage.animatedImageNamed("new-cell-", duration: 2.0)
+            cell.backgroundView = cellBg
+            //動畫圖片2-2
+           
             
             
             
@@ -236,14 +243,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func handlePinch(recognizer: UIPinchGestureRecognizer) {
         if recognizer.state == .Began {
             pinchStarted(recognizer)
+            println("handlePinch.Began")
         }
         if recognizer.state == .Changed
             && pinchInProgress
             && recognizer.numberOfTouches() == 2 {
                 pinchChanged(recognizer)
+            println("handlePinch.Changed")
         }
         if recognizer.state == .Ended {
             pinchEnded(recognizer)
+            println("handlePinch.Ended")
         }
     }
     
