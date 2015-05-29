@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SwiftWeatherService.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Weather Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>1CBB2E421B159B9A00CAACCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CCA92BB1B162129003AF9D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CCA92C51B162129003AF9D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
