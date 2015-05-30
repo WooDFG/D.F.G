@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1525FE1B189FC00081C6D0 /* textCellPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C1525FD1B189FC00081C6D0 /* textCellPlist.plist */; };
 		1C2849B51B1764CE00B1771E /* frog-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2849B11B1764CE00B1771E /* frog-1.png */; };
 		1C2849B61B1764CE00B1771E /* frog-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2849B21B1764CE00B1771E /* frog-2.png */; };
 		1C2849B71B1764CE00B1771E /* frog-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2849B31B1764CE00B1771E /* frog-3.png */; };
@@ -79,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C1525FD1B189FC00081C6D0 /* textCellPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = textCellPlist.plist; sourceTree = "<group>"; };
 		1C2849B11B1764CE00B1771E /* frog-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frog-1.png"; path = "images/frog-1.png"; sourceTree = "<group>"; };
 		1C2849B21B1764CE00B1771E /* frog-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frog-2.png"; path = "images/frog-2.png"; sourceTree = "<group>"; };
 		1C2849B31B1764CE00B1771E /* frog-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frog-3.png"; path = "images/frog-3.png"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				A69755241B046DB1001CA439 /* Images.xcassets */,
 				A69755261B046DB1001CA439 /* LaunchScreen.xib */,
 				A697551B1B046DB1001CA439 /* Supporting Files */,
+				1C1525FD1B189FC00081C6D0 /* textCellPlist.plist */,
 			);
 			path = ClearStyle;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				1CCA93051B162396003AF9D2 /* cloudy2_night.png in Resources */,
 				A69755251B046DB1001CA439 /* Images.xcassets in Resources */,
 				1CCA92FF1B162396003AF9D2 /* btn-Boy-1.png in Resources */,
+				1C1525FE1B189FC00081C6D0 /* textCellPlist.plist in Resources */,
 				1CCA930B1B162396003AF9D2 /* new-bg-1.png in Resources */,
 				1CCA930D1B162396003AF9D2 /* new-cell-1.png in Resources */,
 				1CCA931A1B162679003AF9D2 /* background_summer.png in Resources */,

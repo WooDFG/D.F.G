@@ -120,7 +120,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             //cellBg.image = UIImage(named:"new-cell-1.png")
             cellBg.image = UIImage.animatedImageNamed("new-cell-", duration: 2.0)
             cell.backgroundView = cellBg
-            //動畫圖片2-2
+            
            
             
             
@@ -132,29 +132,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return cell
     }
     
-    func cellDidBeginEditing(editingCell: TableViewCell) {
+    func cellDidBeginEditing(editingCell: TableViewCell)
+    {
         var editingOffset = tableView.contentOffset.y - editingCell.frame.origin.y as CGFloat
+         println("cellDidBeginEditing")
         let visibleCells = tableView.visibleCells() as! [TableViewCell]
-        for cell in visibleCells {
-            UIView.animateWithDuration(0.3, animations: {() in
+        
+        for cell in visibleCells
+        {
+            //新增cell的速度
+           
+            UIView.animateWithDuration(1, animations: {() in
                 cell.transform = CGAffineTransformMakeTranslation(0, editingOffset)
-                if cell !== editingCell {
+                if cell !== editingCell
+                {
                     cell.alpha = 0.3
                 }
             })
         }
     }
     
-    func cellDidEndEditing(editingCell: TableViewCell) {
+    func cellDidEndEditing(editingCell: TableViewCell)
+    {
         let visibleCells = tableView.visibleCells() as! [TableViewCell]
-        for cell: TableViewCell in visibleCells {
+        println("cellDidEndEditing")
+        for cell: TableViewCell in visibleCells
+        {
+            
             UIView.animateWithDuration(0.3, animations: {() in
                 cell.transform = CGAffineTransformIdentity
-                if cell !== editingCell {
+                if cell !== editingCell
+                {
                     cell.alpha = 1.0
                 }
             })
         }
+        println("\(editingCell.toDoItem!.text)")
+        //如果編輯內容為空刪除cell
         if editingCell.toDoItem!.text == "" {
             toDoItemDeleted(editingCell.toDoItem!)
         }
@@ -305,6 +319,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if i >= lowerCellIndex {
                 cell.transform = CGAffineTransformMakeTranslation(0, delta)
             }
+            
+
         }
         
         // scale the placeholder cell
